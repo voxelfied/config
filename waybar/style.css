@@ -1,0 +1,198 @@
+* { 
+    border: none;
+    font-family: Hack Nerd Font;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#waybar {
+    background-color: #232A2E;
+    border: none;
+    box-shadow: none;
+}
+
+window#waybar {
+    border: #3D484D solid 2px;
+}
+
+#custom-arch, #custom-weather, #backlight, #wireplumber, #custom-waybar-mpris, #network, #idle_inhibitor, #battery, #clock, #custom-game {
+    color: #D3C6AA;
+}
+
+#custom-arch {
+    margin-left: 16px;
+}
+
+#workspaces {
+    background-color: #232A2E;
+    margin: 8px 0px 8px 8px;
+    padding: 0px 4px;
+    border: 2px solid #56635F; 
+    border-radius: 16px;
+}
+
+#workspaces button {
+    padding: 0px 4px;
+    color: #56635F;
+}
+
+#workspaces button:hover {
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    transition: none;
+}
+
+#workspaces button.active {
+    color: #A7C080;
+}
+
+#workspaces button.urgent {
+    color: #E67E80;
+}
+
+#window {
+    background-color: #232A2E;
+    margin: 8px 0px;
+    padding: 0px 4px;
+    border: 2px solid #A7C080;
+    border-radius: 8px;
+    color: #A7C080;
+}
+
+window#waybar.empty #window {
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#idle_inhibitor {
+    background-color: #232A2E;
+    margin: 8px 0px;
+    padding: 0px 4px;
+    border: 2px solid #56635F;
+    border-radius: 8px;
+}
+
+#idle_inhibitor.activated {
+    color: #83C092;
+}
+
+#idle_inhibitor.deactivated {
+    color: #56635F;
+}
+
+#custom-weather, #backlight, #wireplumber, #custom-waybar-mpris, #network, #battery, #clock {
+    margin: 8px 0px;
+    padding: 0px 4px;
+}
+
+#custom-weather, #backlight, #wireplumber, #custom-waybar-mpris, #battery, #clock {
+    background-color: #232A2E;
+    border: 2px solid #56635F;
+    border-radius: 8px;
+}
+
+#backlight {
+    color: #DBBC7F;
+}
+
+#wireplumber.muted {
+    color: #E67E80;
+}
+
+#bluetooth {
+    color: #B4BEFE;
+}
+
+#network.wifi {
+    color: #D3C6AA;
+}
+
+#network.ethernet {
+    color: #89a498;
+}
+
+#stats {
+    background-color: #232A2E;
+    margin: 8px 0px;
+    padding: 0px 4px;
+    border: 2px solid #56635F;
+    border-radius: 8px;
+}
+
+#custom-separator1, #custom-separator2 {
+    color: #56635F;
+}
+
+#cpu {
+    color: #A7C080;
+}
+
+#cpu.warning {
+    color: #DBBC7F;
+}
+
+#cpu.critical {
+    color: #E67E80;
+}
+
+#memory {
+    color: #A7C080;
+}
+
+#memory.warning {
+    color: #DBBC7F;
+}
+
+#memory.critical {
+    color: #E67E80;
+}
+
+#temperature {
+    color: #A7C080;
+}
+
+#temperature.warning {
+    color: #DBBC7F;
+}
+
+#temperature.critical {
+    color: #E67E80;
+}
+
+#battery.good {
+    color: #A7C080;
+}
+
+#battery.warning {
+    color: #f0bf4f;
+}
+
+#battery.critical {
+    color: #E67E80;
+}
+
+/* #battery.critical:not(.charging) { */
+/*     animation-name: blink; */
+/*     animation-duration: 0.8s; */
+/*     animation-timing-function: linear; */
+/*     animation-iteration-count: infinite; */
+/*     animation-direction: alternate; */
+/* } */
+
+/* @keyframes blink { */
+/*     to { */
+/*         background-color: #D3C6AA; */
+/*     } */
+/* } */
+
+#custom-game {
+    background-color: #232A2E;
+    margin: 8px 8px 8px 0px;
+    padding: 0px 8px 0px 6px;
+    border: 2px solid #56635F;
+    border-radius: 8px;
+    color: #E69875;
+}

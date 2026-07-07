@@ -1,0 +1,50 @@
+# Text
+font=Hack Nerd Font 12
+text-color=#D3C6AA
+text-alignment=left
+
+# Layout
+sort=+time
+max-history=10
+icons=1
+layer=overlay
+anchor=bottom-right
+
+# Appearance
+max-icon-size=64
+width=384
+height=100
+margin=8,0,0
+outer-margin=8
+padding=16
+border-size=4
+border-radius=8
+border-color=#56635F
+background-color=#232A2E
+
+# Timeout
+default-timeout=3000
+ignore-timeout=0
+
+# Bindings
+on-button-left=invoke-default-action
+on-button-right=dismiss
+on-button-middle=dismiss-all
+
+[urgency=low]
+text-color=#7FBBB3
+border-color=#7FBBB3
+progress-color=#7FBBB3
+default-timeout=3000
+
+[urgency=normal]
+text-color=#A7C080
+border-color=#A7C080
+progress-color=#A7C080
+default-timeout=5000
+
+[urgency=high]
+text-color=#E67E80
+border-color=#E67E80
+progress-color=#E67E80
+default-timeout=0
