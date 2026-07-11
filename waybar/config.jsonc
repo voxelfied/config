@@ -134,7 +134,7 @@
     "bluetooth": {
         "format": "<span font='12' rise='1000'></span>",
         "format-disabled": "<span font='12' rise='1000'>󰂲</span>",
-	"on-click": "kitty bluetui",
+        "on-click": "bluetoothctl power on && kitty bluetui",
         "on-click-right": "bluetooth toggle",
         "tooltip-format": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
