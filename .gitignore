@@ -1,5 +1,6 @@
 *
 !.gitignore
+!assets/
 !fish/
 !hypr/
 !kitty/
@@ -10,7 +11,7 @@
 !waybar/
 !wlogout/
 !wofi/
-!fish/
+!assets/**
 !fish/completions/**
 !fish/conf.d/**
 !fish/config.fish
