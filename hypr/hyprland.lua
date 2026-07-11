@@ -6,7 +6,7 @@
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("awww-daemon")
-    hl.exec_cmd("waybar & awww img ~/Pictures/Wallpapers/rain.jpg")
+    hl.exec_cmd("waybar & awww img ~/Pictures/Wallpapers/fog.jpg")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("mako")
     --GTK Theme
@@ -27,6 +27,7 @@ local menu = "wofi --show"
 local logoutMenu = "wlogout"
 local editor = "code"
 local browser = "firefox-developer-edition"
+local music = "youtube-music"
 
 -- Visual --
 
@@ -87,7 +88,7 @@ hl.animation({ leaf = "fade", enabled = true, speed = 7, bezier = "overshot" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "default" })
 
 --Window & Layer Rules
-hl.layer_rule({ match = { class = "wlogout" }, blur = true })
+hl.layer_rule({ match = { namespace = "logout_dialog" }, blur = true })
 
 -- Input --
 
@@ -101,19 +102,27 @@ hl.config({
         accel_profile = "adaptive",
         sensitivity = 0.2,
         touchpad = {
+            disable_while_typing = false,
             natural_scroll = false,
             scroll_factor = 0.2,
             middle_button_emulation = true,
-            tap_to_click = true,
-            tap_and_drag = false,
             clickfinger_behavior = true,
+            tap_to_click = true,
             drag_lock = false,
+            tap_and_drag = false,
         },
     },
     cursor = {
         no_hardware_cursors = true,
     },
 })
+
+--Shortcuts
+hl.bind("ALT + C", hl.dsp.send_shortcut({ mods = "CTRL", key = "C" }))
+hl.bind("ALT + V", hl.dsp.send_shortcut({ mods = "CTRL", key = "V" }))
+hl.bind("ALT + A", hl.dsp.send_shortcut({ mods = "CTRL", key = "A" }))
+hl.bind("ALT + Z", hl.dsp.send_shortcut({ mods = "CTRL", key = "Z" }))
+hl.bind("ALT + Backspace", hl.dsp.send_shortcut({ mods = "CTRL", key = "Backspace" }))
 
 --Gestures
 hl.config({
@@ -177,6 +186,7 @@ hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(logoutMenu))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(editor))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(music))
 --Window & Workspace Keybinds
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprctl kill"))
@@ -217,7 +227,8 @@ end
 hl.bind(mainMod .. " + Equal", hl.dsp.workspace.toggle_special("scratchpad"))
 hl.bind(mainMod .. " + Minus", hl.dsp.window.move({ workspace = "special:scratchpad" }))
 
---Capture Specific Area
+--Capture Area
+hl.bind("PRINT", hl.dsp.exec_cmd([[grim - | tee ~/Pictures/Screenshots/Screenshot_$(date '+%m-%d-%Y_%H-%M-%S').jpg | wl-copy]]))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd([[grim -g "$(slurp)" - | tee ~/Pictures/Screenshots/Screenshot_$(date '+%m-%d-%Y_%H-%M-%S').jpg | wl-copy]]))
 hl.bind(mainMod .. " + CTRL + BracketLeft", hl.dsp.exec_cmd([[gpu-screen-recorder -w screen -o ~/Pictures/Videos/Recording_$(date '+%m-%d-%Y_%H-%M-%S').mp4 & notify-send -u low -t 1000 "Screen Capture" "Recording started." -i /usr/share/icons/camera.png]]))
 hl.bind(mainMod .. " + CTRL + BracketRight", hl.dsp.exec_cmd([[killall -SIGINT gpu-screen-recorder && notify-send -u low "Screen Capture" "Recording stopped." -i /usr/share/icons/camera-off.png]]))

@@ -198,7 +198,7 @@
           "",
           ""
       ],
-      "on-click": "auto-cpufreq-gtk",
+      "on-click": "kitty intel-undervolt measure",
       "tooltip": false,
       "interval": 20
     },

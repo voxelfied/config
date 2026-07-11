@@ -15,7 +15,7 @@ window#waybar {
     border: #3D484D solid 2px;
 }
 
-#custom-arch, #custom-weather, #backlight, #wireplumber, #custom-waybar-mpris, #network, #idle_inhibitor, #battery, #clock, #custom-game {
+#custom-arch, #custom-weather, #backlight, #wireplumber, #custom-waybar-mpris, #network, #idle_inhibitor, #clock, #custom-game {
     color: #D3C6AA;
 }
 
@@ -160,6 +160,10 @@ window#waybar.empty #window {
 
 #temperature.critical {
     color: #E67E80;
+}
+
+#battery {
+    color: #83C092;
 }
 
 #battery.good {
