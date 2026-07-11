@@ -6,6 +6,7 @@
 
 ![Desktop](assets/desktop.png)
 ![wlogout](assets/wlogout.png)
+![wofi](assets/wofi.png)
 
 Specifications:
 - **Distro:** Arch Linux
