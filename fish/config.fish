@@ -15,6 +15,7 @@ alias commit "git commit -m"
 alias tls "tmux ls"
 alias tlsw "tmux list-windows"
 # Tools
+alias update-packages "pacman -Qqen > ~/.config/pkglist/pkglist.txt; and pacman -Qqem > ~/.config/pkglist/aurlist.txt"
 alias myip "curl http://ipecho.net/plain; echo"
 
 ## Add to $PATH ##
