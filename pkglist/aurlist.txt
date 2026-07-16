@@ -5,7 +5,6 @@ github-desktop-bin
 gtk-engine-murrine
 mkinitcpio-firmware
 neofetch
-neovim-nightly-bin
 opentabletdriver
 osu-lazer-bin
 phinger-cursors

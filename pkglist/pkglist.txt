@@ -78,6 +78,7 @@ man-pages
 mangohud
 meson
 mpv
+neovim
 networkmanager
 noto-fonts
 noto-fonts-cjk
@@ -89,6 +90,7 @@ openbsd-netcat
 openssh
 openvpn
 otf-font-awesome
+pacman-contrib
 pavucontrol
 pcmanfm
 pipewire-pulse
